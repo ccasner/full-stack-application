@@ -4,6 +4,7 @@ const setAPIOrigin = require('../../lib/set-api-origin')
 const config = require('./config')
 const authEvents = require('./auth/events')
 const tollEvents = require('./tolls/events')
+const chargeEvents = require('./charges/events')
 
 $(() => {
   setAPIOrigin(location, config)
@@ -21,4 +22,5 @@ $(() => {
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#sign-out').on('submit', authEvents.onSignOut)
   tollEvents.addHandlers()
+  chargeEvents.addHandlers()
 })

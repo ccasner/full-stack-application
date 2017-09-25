@@ -1,14 +1,7 @@
 {{#each tolls as |toll|}}
-
-  <table style="width:100%" data-id="{{toll.id}}">
-    <tr>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-    <td>{{toll.location}}</td>
-    <td>${{toll.price}}</td>
-    <td><button class='add-button'>Add</button></td>
-  </table>
-
+<div data-id="{{toll.id}}" class="exit">
+  <h1>{{toll.location}}</h1>
+  <h2>Price: ${{toll.price}}</h2>
+  <button class='add-button'>Add</button>
+</div>
 {{/each}}
