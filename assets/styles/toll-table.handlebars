@@ -1,0 +1,19 @@
+{{#each tolls as |toll|}}
+
+  <!-- {{> partial}}
+  Don't uncomment yet -->
+
+ <!-- Developers, why are we using data-id and not just id? -->
+  <table style="width:100%" data-id="{{toll.id}}">
+    <caption>Toll Calculator</caption>
+    <tr>
+      <th>Exit</th>
+      <th>Price</th>
+      <th>Add Charge</th>
+    </tr>
+    <td>Exit: {{toll.location}}</td>
+    <td>Price: {{toll.price}}</td>
+    <td><button class='add-button'>Add</button></td>
+  </table>
+
+{{/each}}
