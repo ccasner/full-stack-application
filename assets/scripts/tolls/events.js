@@ -15,9 +15,17 @@ const onClearTolls = (event) => {
   ui.clearTolls()
 }
 
+const onAddTolls = (event) => {
+  event.preventDefault()
+  api.addCharge()
+  .then(ui.addChargeSuccess)
+  .catch(ui.failure)
+}
+
 const addHandlers = () => {
   $('#getTollsButton').on('click', onGetTolls)
   $('#clearTollsButton').on('click', onClearTolls)
+  $('#add-button').on('click', onAddCharge)
 }
 
 module.exports = {

@@ -1,6 +1,6 @@
 'use strict'
 
-const showTolls = require('../styles/toll-table.handlebars')
+const showTolls = require('../../styles/toll-table.handlebars')
 
 const getTollsSuccess = (data) => {
   console.log(data)
