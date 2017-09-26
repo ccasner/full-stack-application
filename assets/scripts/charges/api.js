@@ -42,10 +42,17 @@ const getCharges = function () {
     }
   })
 }
+const getOneToll = function () {
+  return $.ajax({
+    url: config.apiOrigin + '/tolls/' + store.tolls.id,
+    method: 'GET'
+  })
+}
 
 module.exports = {
   getCharges,
   addCharge,
   updateCharge,
-  deleteCharge
+  deleteCharge,
+  getOneToll
 }

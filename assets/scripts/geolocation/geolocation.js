@@ -1,5 +1,4 @@
 
-
 function initMap () {
   const leeExit = {lat: 42.297662, lng: -73.243628}
   const blandfordExit = {lat: 42.220804, lng: -72.963571}
@@ -26,11 +25,13 @@ function initMap () {
   const lee = new google.maps.Marker({
     position: leeExit,
     map: map,
-    title: 'Lee'
+    title: 'Lee',
+    price: '$0.25'
   })
   lee.addListener('mouseover', function () {
-    console.log('$0.25')
+    console.log(this.price)
   })
+
   const blandford = new google.maps.Marker({
     position: blandfordExit,
     map: map,
@@ -152,5 +153,15 @@ function initMap () {
     console.log('$1.25')
   })
 }
+
+
+// window.eqfeed_callback = function(results) {
+//        for (var i = 0; i < results.features.length; i++) {
+//          var coords = results.features[i].geometry.coordinates;
+//          var latLng = new google.maps.LatLng(coords[1],coords[0]);
+//          var marker = new google.maps.Marker({
+//            position: latLng,
+//            map: map
+//          });
 
 // google.maps.event.addDomListener(window, 'load', initialize)

@@ -1,15 +1,21 @@
 'use strict'
 
 const showTolls = require('../../styles/toll-table.handlebars')
+const chargeEvents = require('../charges/events')
+const store = require('../store')
 
-const getTollsSuccess = (data) => {
-  console.log(data)
-  const showTollsHtml = showTolls({ tolls: data.tolls })
-  $('.content').append(showTollsHtml)
+const getTollId = function (event) {
+  event.preventDefault()
+  const elementId = $(this).parent().parent().attr('data-id')
+  store.tollId = elementId
 }
 
-const clearTolls = () => {
-  $('.content').empty()
+const getTollsSuccess = (data) => {
+  store.tolls = data.tolls
+  const showTollsHtml = showTolls({ tolls: data.tolls })
+  $('.content').append(showTollsHtml)
+  $('.add-button').on('click', getTollId)
+  $('.add-button').on('click', chargeEvents.onAddCharge)
 }
 
 const failure = (error) => {
@@ -18,6 +24,5 @@ const failure = (error) => {
 
 module.exports = {
   getTollsSuccess,
-  clearTolls,
   failure
 }

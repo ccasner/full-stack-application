@@ -2,7 +2,7 @@
 
 const api = require('./api.js')
 const ui = require('./ui.js')
-const getFormFields = ('../../lib/get-form-fields')
+const getFormFields = require('../../../lib/get-form-fields')
 
 const onGetCharges = (event) => {
   console.log('working')
@@ -12,22 +12,21 @@ const onGetCharges = (event) => {
     .catch(ui.failure)
 }
 
-const onAddCharge = (event) => {
-  event.preventDefault()
-  console.log('button working')
-  const data = getFormFields(this)
-  api.addCharge(data)
-    .then(ui.addChargeSuccess)
+const onAddCharge = () => {
+  console.log('adding charge')
+  console.log()
+  api.getOneToll()
+    .then(ui.getOneTollSuccess)
     .catch(ui.failure)
 }
 
 const addHandlers = () => {
   $('#getChargesButton').on('click', onGetCharges)
-  $('#add-button').on('click', onAddCharge)
 }
 
 module.exports = {
-  addHandlers
+  addHandlers,
+  onAddCharge
 }
 
 // add buttons don't appear when page loads so add click handler to parent instread of child

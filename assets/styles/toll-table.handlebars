@@ -1,8 +1,9 @@
 {{#each tolls as |toll|}}
-<ul data-id="{{toll.id}}" class='static'>
-  <li class='dynamic'>Exit: {{toll.location}}</li>
-  <li class='dynamic'>Price: ${{toll.price}}</li>
-</ul>
+<tr data-id="{{toll.id}}">
+  <td>Exit: {{toll.location}}</td>
+  <td>Price: ${{toll.price}}</td>
+  <td><button class='add-button'>{{toll.id}}</button>
+</tr>
 
 {{/each}}
 

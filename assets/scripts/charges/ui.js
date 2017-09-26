@@ -10,6 +10,9 @@ const addChargeSuccess = (data) => {
   console.log('charge added')
   console.log(data)
 }
+const getOneTollSuccess = (data) => {
+  console.log('get one toll success')
+}
 
 const failure = (error) => {
   console.error(error)
@@ -18,5 +21,6 @@ const failure = (error) => {
 module.exports = {
   getChargesSuccess,
   addChargeSuccess,
+  getOneTollSuccess,
   failure
 }
