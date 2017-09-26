@@ -9,6 +9,11 @@ const getTollId = function (event) {
   const elementId = $(this).parent().parent().attr('data-id')
   store.tollId = elementId
 }
+const getChargeId = function (event) {
+  event.preventDefault()
+  const elementId = $(this).parent().parent().attr('data-id')
+  store.chargeId = elementId
+}
 
 const getTollsSuccess = (data) => {
   store.tolls = data.tolls
@@ -17,6 +22,13 @@ const getTollsSuccess = (data) => {
   $('.add-button').on('click', getTollId)
   $('.add-button').on('click', chargeEvents.onGetOneToll)
 }
+const getChargesSuccess = (data) => {
+  store.charges = data.charges
+  const showChargesHtml = showTolls({ charges: data.charges })
+  $('.content').append(showChargesHtml)
+  $('.remove-button').on('click', getChargeId)
+  $('.remove-button').on('click', chargeEvents.onGetCharges)
+}
 
 const failure = (error) => {
   console.error(error)
@@ -24,5 +36,6 @@ const failure = (error) => {
 
 module.exports = {
   getTollsSuccess,
+  getChargesSuccess,
   failure
 }

@@ -5,34 +5,35 @@ const ui = require('./ui.js')
 const getFormFields = require('../../../lib/get-form-fields')
 const store = require('../store')
 
-const onGetCharges = (event) => {
-  console.log('working')
-  event.preventDefault()
+const onGetCharges = () => {
   api.getCharges()
     .then(ui.getChargesSuccess)
     .catch(ui.failure)
 }
-const onAddCharge = () => {
-  const charge = store.charge
-  console.log(charge)
-  // api.addCharge(location, price, date)
-  //   .then(ui.addChargeSuccess)
-  //   .catch(ui.failure)
-}
+
 const onGetOneToll = () => {
   const tollId = store.tollId
   api.getOneToll(tollId)
     .then(ui.getOneTollSuccess)
     .catch(ui.failure)
 }
+const onDeleteCharge = (event) => {
+  event.preventDefault()
+  const chargeId = getFormFields(this)
+  console.log(chargeId)
+  api.deleteCharge(chargeId)
+    .then(ui.deleteChargeSuccess)
+    .catch(ui.failure)
+}
 
 const addHandlers = () => {
   $('#getChargesButton').on('click', onGetCharges)
+  // $('#deleteChargesButton').on('click', onDeleteCharge)
 }
 
 module.exports = {
   addHandlers,
-  onAddCharge,
+  onDeleteCharge,
   onGetOneToll
 }
 

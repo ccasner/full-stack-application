@@ -30,9 +30,9 @@ const updateCharge = function (data) {
     data
   })
 }
-const deleteCharge = function () {
+const deleteCharge = function (data) {
   return $.ajax({
-    url: config.apiOrigin + '/charges/' + store.charge.id,
+    url: config.apiOrigin + '/charges/' + data,
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + store.user.token
