@@ -5,7 +5,9 @@ const ui = require('./ui.js')
 const getFormFields = require('../../../lib/get-form-fields')
 const store = require('../store')
 
+
 const onGetCharges = () => {
+
   api.getCharges()
     .then(ui.getChargesSuccess)
     .catch(ui.failure)
@@ -28,7 +30,7 @@ const onDeleteCharge = (event) => {
 
 const addHandlers = () => {
   $('#getChargesButton').on('click', onGetCharges)
-  // $('#deleteChargesButton').on('click', onDeleteCharge)
+  $('#deleteChargeButton').on('click', onDeleteCharge)
 }
 
 module.exports = {

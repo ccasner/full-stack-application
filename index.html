@@ -135,8 +135,10 @@ var map, infoWindow;
       <button id="getTollsButton" class="btn btn-default">Get Tolls</button>
       <div id="content" class="content"></div>
       <button id="getChargesButton" class="btn btn-default">My Charges</button>
-
-      <button id="deleteChargesButton" class="btn btn-default">Clear Charges</button>
+      <form>
+        <input type="text" name=charge[id] placeholder="Charge to Delete">
+      <button id="deleteChargeButton" class="btn btn-default">Clear Charges</button>
+    </form>
       <table style="width:100%" class='toll-table'>
         <caption>Tolls</caption>
         <tr>

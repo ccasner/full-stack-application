@@ -20,14 +20,18 @@ const addCharge = function (location, price, date) {
   })
 }
 
-const updateCharge = function (data) {
+const updateCharge = function (data, date) {
   return $.ajax({
-    url: config.apiOrigin + '/charges/' + store.charge.id,
+    url: config.apiOrigin + '/charges/' + data,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
-    data
+    data: {
+      'charge': {
+        'date': date
+      }
+    }
   })
 }
 const deleteCharge = function (data) {

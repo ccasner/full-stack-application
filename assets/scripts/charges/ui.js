@@ -3,7 +3,7 @@ const store = require('../store')
 const api = require('./api')
 const getFormFields = require('../../../lib/get-form-fields')
 
-const showTolls = require('../../styles/toll-table.handlebars')
+const showCharges = require('../../styles/toll-table.handlebars')
 
 // const getChargesSuccess = (data) => {
 //   store.charges = data.charges
@@ -30,9 +30,6 @@ const showTolls = require('../../styles/toll-table.handlebars')
 //   })
 // }
 
-
-
-
 const addChargeSuccess = () => {
   console.log('charge added')
 }
@@ -49,14 +46,50 @@ const getOneTollSuccess = (data) => {
   }
   onAddCharge(data)
 }
+const getChargeId = function (event) {
+  event.preventDefault()
+  console.log('here is the charge id')
+  const elementId = $(this).parent().parent().attr('data-id')
+  store.chargeId = elementId
+  console.log(elementId)
+}
+const deleteChargeSuccess = () => {
+  console.log('charge deleted')
+}
+const onDeleteCharge = function () {
+  const data = store.chargeId
+  api.deleteCharge(data)
+    .then(deleteChargeSuccess)
+    .catch(failure)
+}
+const updateChargeSuccess = () => {
+  console.log('charge updated')
+}
+const onUpdateCharge = function () {
+  const data = store.chargeId
+  const date = '2017-09-08'
+  api.updateCharge(data, date)
+    .then(updateChargeSuccess)
+    .catch(failure)
+}
+
+const getChargesSuccess = (data) => {
+  store.charges = data.charges
+  const showChargesHtml = showCharges({ charges: data.charges })
+  $('.content').append(showChargesHtml)
+  $('.remove-button').on('click', getChargeId)
+  $('.remove-button').on('click', onDeleteCharge)
+  $('.edit-button').on('click', getChargeId)
+  $('.edit-button').on('click', onUpdateCharge)
+}
 
 const failure = (error) => {
   console.error(error)
 }
 
 module.exports = {
-  getChargesSuccess,
   addChargeSuccess,
+  getChargesSuccess,
   getOneTollSuccess,
   failure
 }
