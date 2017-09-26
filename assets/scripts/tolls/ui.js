@@ -6,9 +6,6 @@ const getTollsSuccess = (data) => {
   console.log(data)
   const showTollsHtml = showTolls({ tolls: data.tolls })
   $('.content').append(showTollsHtml)
-  $('.add-button').on('click', function () {
-    $(this).parent().parent().remove()
-  })
 }
 
 const clearTolls = () => {

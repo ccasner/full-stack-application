@@ -12,9 +12,9 @@ const onGetCharges = (event) => {
     .catch(ui.failure)
 }
 
-const onAddCharge = () => {
-  console.log('button working')
+const onAddCharge = (event) => {
   event.preventDefault()
+  console.log('button working')
   const data = getFormFields(this)
   api.addCharge(data)
     .then(ui.addChargeSuccess)
@@ -23,9 +23,13 @@ const onAddCharge = () => {
 
 const addHandlers = () => {
   $('#getChargesButton').on('click', onGetCharges)
-  $('#add').on('submit', onAddCharge)
+  $('#add-button').on('click', onAddCharge)
 }
 
 module.exports = {
   addHandlers
 }
+
+// add buttons don't appear when page loads so add click handler to parent instread of child
+// on page load have tolls appear with buttons
+// then use delete buttons on charges div to remove charges if necessary

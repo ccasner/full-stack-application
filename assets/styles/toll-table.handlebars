@@ -1,10 +1,9 @@
 {{#each tolls as |toll|}}
-<div data-id="{{toll.id}}" class="exit">
-  <h1>{{toll.location}}</h1>
-  <h2>Price: ${{toll.price}}</h2>
-  <input type="submit" class="button" name="add" value="Add">
+<ul data-id="{{toll.id}}" class='static'>
+  <li class='dynamic'>Exit: {{toll.location}}</li>
+  <li class='dynamic'>Price: ${{toll.price}}</li>
+</ul>
 
-</div>
 {{/each}}
 
-  <!-- <button class='add-button'>Add</button> -->
+  <!-- <li class='dynamic'><button class='add-button'>Add</button></li> -->
