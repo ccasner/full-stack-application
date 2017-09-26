@@ -15,7 +15,7 @@ const getTollsSuccess = (data) => {
   const showTollsHtml = showTolls({ tolls: data.tolls })
   $('.content').append(showTollsHtml)
   $('.add-button').on('click', getTollId)
-  $('.add-button').on('click', chargeEvents.onAddCharge)
+  $('.add-button').on('click', chargeEvents.onGetOneToll)
 }
 
 const failure = (error) => {

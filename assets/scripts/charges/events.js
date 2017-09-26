@@ -3,6 +3,7 @@
 const api = require('./api.js')
 const ui = require('./ui.js')
 const getFormFields = require('../../../lib/get-form-fields')
+const store = require('../store')
 
 const onGetCharges = (event) => {
   console.log('working')
@@ -11,11 +12,16 @@ const onGetCharges = (event) => {
     .then(ui.getChargesSuccess)
     .catch(ui.failure)
 }
-
 const onAddCharge = () => {
-  console.log('adding charge')
-  console.log()
-  api.getOneToll()
+  const charge = store.charge
+  console.log(charge)
+  // api.addCharge(location, price, date)
+  //   .then(ui.addChargeSuccess)
+  //   .catch(ui.failure)
+}
+const onGetOneToll = () => {
+  const tollId = store.tollId
+  api.getOneToll(tollId)
     .then(ui.getOneTollSuccess)
     .catch(ui.failure)
 }
@@ -26,7 +32,8 @@ const addHandlers = () => {
 
 module.exports = {
   addHandlers,
-  onAddCharge
+  onAddCharge,
+  onGetOneToll
 }
 
 // add buttons don't appear when page loads so add click handler to parent instread of child

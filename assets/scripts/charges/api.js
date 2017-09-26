@@ -3,14 +3,20 @@
 const config = require('../config')
 const store = require('../store')
 
-const addCharge = function (data) {
+const addCharge = function (location, price, date) {
   return $.ajax({
     url: config.apiOrigin + '/charges',
     method: 'POST',
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
-    data
+    data: {
+      'charge': {
+        'location': location,
+        'price': price,
+        'date': date
+      }
+    }
   })
 }
 
@@ -42,9 +48,9 @@ const getCharges = function () {
     }
   })
 }
-const getOneToll = function () {
+const getOneToll = function (data) {
   return $.ajax({
-    url: config.apiOrigin + '/tolls/' + store.tolls.id,
+    url: config.apiOrigin + '/tolls/' + data,
     method: 'GET'
   })
 }
