@@ -36,13 +36,13 @@
     <body>
 
         <div id="map"></div>
-        <!-- <script>
+        <script>
           function initMap () {
             const myLatLng = {lat: 42.297662, lng: -73.243628}
             const blandfordExit = {lat: 42.220804, lng: -72.963571}
             const map = new google.maps.Map(document.getElementById('map'), {
               zoom: 8,
-              center: myLatLng
+              center: blandfordExit
             })
 
             const lee = new google.maps.Marker({
@@ -56,12 +56,12 @@
               title: 'Blandford'
             })
           }
-        </script> -->
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMVv5sfLKk5TDsNYNTaYuu9QpGeIa3VzY&callback=initMap"
+        </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_pEqp7-EjtsC3ilVbHmMEiJkft3H07bg&callback=initMap"
           type="text/javascript"></script>
-        <script src="/full-stack-application/assets/scripts/geolocation/geolocation.js"></script>
+        <script src="/assets/scripts/geolocation/geolocation.js"></script>
 
-<script>
+<!-- <script>
 var map, infoWindow;
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
@@ -98,7 +98,7 @@ var map, infoWindow;
                               'Error: Your browser doesn\'t support geolocation.');
         infoWindow.open(map);
       }
-      </script>
+      </script> -->
 
 
 
