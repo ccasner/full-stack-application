@@ -270,6 +270,7 @@ function initMap () {
     this.setIcon()
   })
 }
+initMap()
 
 module.exports = {
   initMap
