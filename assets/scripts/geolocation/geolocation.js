@@ -1,3 +1,4 @@
+// const googleMaps = require('../config')
 
 function initMap () {
   const leeExit = {lat: 42.297662, lng: -73.243628}
@@ -270,7 +271,9 @@ function initMap () {
   })
 }
 
-
+module.exports = {
+  initMap
+}
 // window.eqfeed_callback = function(results) {
 //        for (var i = 0; i < results.features.length; i++) {
 //          var coords = results.features[i].geometry.coordinates;
