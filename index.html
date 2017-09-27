@@ -32,11 +32,14 @@
     </form>
     <p id="message"></p>
     <h1>Toll Tracker</h1>
+    <div id="map"></div>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_pEqp7-EjtsC3ilVbHmMEiJkft3H07bg&callback=initMap"></script>
+      <script src="/assets/scripts/geolocation/geolocation.js"></script>
     </head>
     <body>
 
-        <div id="map"></div>
-        <script>
+
+        <!-- <script>
           function initMap () {
             const myLatLng = {lat: 42.297662, lng: -73.243628}
             const blandfordExit = {lat: 42.220804, lng: -72.963571}
@@ -56,11 +59,9 @@
               title: 'Blandford'
             })
           }
-        </script>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_pEqp7-EjtsC3ilVbHmMEiJkft3H07bg&callback=initMap"
-          type="text/javascript"></script>
-        <script src="/assets/scripts/geolocation/geolocation.js"></script>
+        </script> -->
 
+<!-- type="text/javascript" -->
 <!-- <script>
 var map, infoWindow;
       function initMap() {
