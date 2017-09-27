@@ -47,36 +47,49 @@ body {
 }
 #toll-content {
   float: left;
-  background-color: yellow;
-  color: purple;
-  margin: 5px auto;
+  background-color: #3BBA14;
+  color: white;
+  margin: 50px auto auto 125px;
   width: auto;
 }
 #authbox {
   border: 10px dashed black;
-  background-color: yellow;
+  background-color: #FFE700;
   border-radius: 10px;
   float: right;
-  margin: 5px auto;
+  margin: 50px 100px auto auto;
   width: auto;
 }
 #sign-in-message {
-  color: #008000;
+  color: #3BBA14;
   text-align: center;
   font-size: 15px;
 }
 #sign-up-message{
-  color: #008000;
+  color: #3BBA14;
   text-align: center;
   font-size: 15px;
 }
 #message {
   text-align: center;
   font-size: 20px;
-  color: yellow;
+  color: #FFE700;
 }
 #getChargesButton {
   display: none;
+  margin: 50px 100px 50px 100px;
+  font-size: 50px;
+  background-color: #FFE700;
+  color: black;
+  border: 5px solid black;
+}
+#hideChargesButton {
+  display: none;
+  margin: 50px 50px 25px 100px;
+  font-size: 50px;
+  background-color: #FFE700;
+  color: black;
+  border: 5px solid black;
 }
 #exit {
   float: left;
@@ -94,7 +107,7 @@ td {
 }
 input {
   background-color: #FFFFB2;
-  color: #008000;
+  color: #3BBA14;
   font-size: 13px;
   padding-left: 5px;
   // border: 1px solid $black;
@@ -103,25 +116,55 @@ input {
 }
 #edit-date {
   display: none;
+  float: right;
+  margin: auto 200px 20px 100px;
+}
+#authmessage {
+  color: #FFFFB2;
+  font-size: 15px;
+}
+#passwordMessage {
+  color: #FFFFB2;
+  font-size: 15px;
+}
+#signoutMessage {
+  color: #FFFFB2;
+  font-size: 15px;
+  float: right;
+}
+#message2 {
+  float: right;
+  margin: auto 200px 20px 100px;
+  color: #FFFFB2;
 }
 h1 {
   text-align: center;
   clear: both;
-  color: yellow;
+  color: #FFE700;
   font-family: monospace;
   font-weight: bold;
   font-size: 50px;
+  font-family: 'Arbutus', cursive;
 }
 h2 {
   font-size: 10px;
   margin: 0;
 }
-
+.add-button {
+  background-color: lighten(#2355dd, 2%);
+}
+.remove-button {
+  background-color: lighten(red, 20%);
+}
+.edit-button {
+  background-color: lighten(#77CCE5, 2%);
+}
 #charge-content {
   float: right;
-  background-color: purple;
-  color: yellow;
-  margin: 5px auto;
+  background-color: #3BBA14;
+  color: white;
+  margin: 50px 125px auto auto;
+  width: auto;
 }
 #map {
   border-radius: 15px;
@@ -133,4 +176,11 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+}
+footer {
+  clear: both;
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 500px;
 }

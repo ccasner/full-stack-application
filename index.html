@@ -6,6 +6,7 @@
 
       <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      <link href="https://fonts.googleapis.com/css?family=Arbutus|Encode+Sans+Expanded" rel="stylesheet">
 
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
@@ -15,7 +16,7 @@
       <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
 
-
+    <p id="signoutMessage"></p>
     <form id="sign-out">
         <fieldset>
           <input type="submit" name="submit" value="Sign Out!">
@@ -110,6 +111,7 @@ var map, infoWindow;
 
 
       <div id="toll-content" class="toll-content"></div>
+      <p id="authmessage"></p>
       <div id="authbox">
         <p id="sign-in-message">Sign In to see your charges!</p>
         <form id="sign-in">
@@ -130,15 +132,19 @@ var map, infoWindow;
           </fieldset>
         </form>
       </div>
-      <div id="charge-content" class="charge-content"></div>
+
       <button id="getChargesButton" class="btn btn-default">My Charges</button>
+      <button id="hideChargesButton" class="btn btn-default">Hide Charges</button>
+      <div id="charge-content" class="charge-content"></div>
       <form id="edit-date">
         <fieldset>
-          <!-- <input type="text" name="charge[id]" placeholder="Enter Charge Date"> -->
           <input type="date" name="charge[date]" placeholder="Enter New Date">
           <input type="submit" class="button" name="submit" value="Confirm">
         </fieldset>
       </form>
       <p id="message2"></p>
     </body>
+    <footer>
+      <p>Made by Charlotte Casner</p>
+    </footer>
 </html>

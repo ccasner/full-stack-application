@@ -22,6 +22,7 @@ const getTollsSuccess = (data) => {
 const failure = (error) => {
   console.error(error)
   $('#message2').text('Something went wrong')
+  $('#message2').delay(1000).fadeOut('slow')
 }
 
 module.exports = {

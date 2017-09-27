@@ -6,9 +6,15 @@ const getFormFields = require('../../../lib/get-form-fields')
 const store = require('../store')
 
 const onGetCharges = () => {
+  $('#charge-content').show()
   api.getCharges()
     .then(ui.getChargesSuccess)
     .catch(ui.failure)
+}
+const onClearCharges = () => {
+  $('#charge-content').hide()
+  $('#hideChargesButton').hide()
+  $('#getChargesButton').show()
 }
 
 const onGetOneToll = () => {
@@ -57,6 +63,7 @@ const allowEdit = function (event) {
 
 const addHandlers = () => {
   $('#getChargesButton').on('click', onGetCharges)
+  $('#hideChargesButton').on('click', onClearCharges)
   $('#edit-date').on('submit', onUpdateCharge)
   $('#charge-content').on('click', '.remove-button', onDeleteCharge)
   $('#charge-content').on('click', '.edit-button', allowEdit)
