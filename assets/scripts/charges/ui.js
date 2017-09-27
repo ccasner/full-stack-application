@@ -28,12 +28,14 @@ const getOneTollSuccess = (data) => {
 const deleteChargeSuccess = (deleteButton) => {
   console.log('charge deleted')
   $('#message2').text('Charge Deleted')
+  $('#message2').delay(1000).fadeOut('slow')
   $(deleteButton).parent().parent().remove()
 }
 
 const updateChargeSuccess = () => {
   console.log('charge updated')
   $('#message2').text('Charge Updated')
+  $('#message2').delay(1000).fadeOut('slow')
   $('#edit-date').hide()
   $('#edit-date').trigger('reset')
   api.getCharges()
@@ -50,6 +52,7 @@ const getChargesSuccess = (data) => {
 const failure = (error) => {
   console.error(error)
   $('#message2').text('Something went wrong')
+  $('#message2').delay(1000).fadeOut('slow')
 }
 
 module.exports = {

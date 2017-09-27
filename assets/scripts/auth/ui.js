@@ -61,6 +61,7 @@ const signOutFailure = function (error) {
   $('#message').delay(1000).fadeOut('slow')
 }
 
+
 module.exports = {
   signUpSuccess,
   signUpFailure,

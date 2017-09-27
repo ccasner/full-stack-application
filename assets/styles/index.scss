@@ -1,14 +1,90 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
+
+
+body {
+  background-color: #69015A;
+}
 #change-password {
   display: none;
+  float: left;
+  width: auto;
+  padding: 6px 10px;
+  margin: 4px 0;
+  box-sizing: border-box;
+  border: 2px solid red;
+  border-radius: 15px;
 }
 #sign-out {
   display: none;
+  float: right;
+  width: auto;
+  padding: 6px 10px;
+  margin: 4px 0;
+  box-sizing: border-box;
+  border: 2px solid red;
+  border-radius: 15px;
+}
+#sign-in {
+  clear: both;
+  text-align: center;
+  width: auto;
+  padding: 6px 10px;
+  margin: 4px 0;
+  box-sizing: border-box;
+  // border: 2px solid red;
+  border-radius: 15px;
+}
+#sign-up {
+  float: right;
+  width: auto;
+  padding: 6px 10px;
+  margin: 4px 0;
+  box-sizing: border-box;
+  // border: 2px solid red;
+  border-radius: 15px;
+}
+#toll-content {
+  float: left;
+  background-color: yellow;
+  color: purple;
+  margin: 5px auto;
+  width: auto;
+}
+#authbox {
+  border: 10px dashed black;
+  background-color: yellow;
+  border-radius: 10px;
+  float: right;
+  margin: 5px auto;
+  width: auto;
+}
+#sign-in-message {
+  color: #008000;
+  text-align: center;
+  font-size: 15px;
+}
+#sign-up-message{
+  color: #008000;
+  text-align: center;
+  font-size: 15px;
+}
+#message {
+  text-align: center;
+  font-size: 20px;
+  color: yellow;
 }
 #getChargesButton {
   display: none;
+}
+#exit {
+  float: left;
+  font-size: 50px;
+}
+#price{
+  float: left;
+  font-size: 50px;
 }
 tr {
   text-align: left;
@@ -16,6 +92,45 @@ tr {
 td {
   border: 1px solid black;
 }
+input {
+  background-color: #FFFFB2;
+  color: #008000;
+  font-size: 13px;
+  padding-left: 5px;
+  // border: 1px solid $black;
+  border-radius: 15px;
+  // box-shadow: 3px 4px 0 0;
+}
 #edit-date {
   display: none;
+}
+h1 {
+  text-align: center;
+  clear: both;
+  color: yellow;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 50px;
+}
+h2 {
+  font-size: 10px;
+  margin: 0;
+}
+
+#charge-content {
+  float: right;
+  background-color: purple;
+  color: yellow;
+  margin: 5px auto;
+}
+#map {
+  border-radius: 15px;
+  height: 75%;
+  width: 75%;
+  margin: 5px auto;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }

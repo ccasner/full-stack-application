@@ -15,24 +15,25 @@
       <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
 
-    <title>Simple markers</title>
-    <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 50%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
 
+    <form id="sign-out">
+        <fieldset>
+          <input type="submit" name="submit" value="Sign Out!">
+        </fieldset>
+      </form>
+    <form id="change-password">
+      <fieldset>
+      <input type="password" name="passwords[old]" placeholder="Enter Old Password">
+      <input type="password" name="passwords[new]" placeholder="Enter New Password">
+      <input type="submit" class="button" name="submit" value="Confirm">
+      <p id="passwordMessage"></p>
+    </fieldset>
+    </form>
+    <p id="message"></p>
+    <h1>Toll Tracker</h1>
     </head>
     <body>
-        <h1>Toll Tracker</h1>
+
         <div id="map"></div>
         <!-- <script>
           function initMap () {
@@ -101,9 +102,16 @@ var map, infoWindow;
 
 
 
-        <p id="exit"></p>
-        <p id="price"></p>
-        <p id="message"></p>
+
+
+
+      <!-- <p id="exit"></p>
+      <p id="price"></p> -->
+
+
+      <div id="toll-content" class="toll-content"></div>
+      <div id="authbox">
+        <p id="sign-in-message">Sign In to see your charges!</p>
         <form id="sign-in">
           <fieldset>
             <input type="text" name="credentials[email]" placeholder="Enter Email">
@@ -111,30 +119,17 @@ var map, infoWindow;
             <input type="submit" class="button" name="submit" value="Sign in!">
           </fieldset>
         </form>
-        <form id="sign-out">
-            <fieldset>
-              <input type="submit" name="submit" value="Sign Out!">
-            </fieldset>
-          </form>
+        <p id="sign-up-message">New User? Sign Up and get tracking!</p>
         <form id="sign-up">
           <fieldset>
-            <h2>New User? Sign up!</h2>
+            <!-- <h2>New User? Sign up!</h2> -->
             <input type="text" name="credentials[email]" placeholder="Enter Username">
             <input type="password" name="credentials[password]" placeholder="Enter Password">
             <input type="password" name="credentials[password_confirmation]" placeholder="Re-Enter Password">
             <input type="submit" class="button" name="submit" value="Sign up!">
           </fieldset>
         </form>
-      <form id="change-password">
-        <fieldset>
-        <h3>Change Password?</h3>
-        <input type="password" name="passwords[old]" placeholder="Enter Old Password">
-        <input type="password" name="passwords[new]" placeholder="Enter New Password">
-        <input type="submit" class="button" name="submit" value="Confirm">
-        <p id="passwordMessage"></p>
-      </fieldset>
-      </form>
-      <div id="toll-content" class="toll-content"></div>
+      </div>
       <div id="charge-content" class="charge-content"></div>
       <button id="getChargesButton" class="btn btn-default">My Charges</button>
       <form id="edit-date">
