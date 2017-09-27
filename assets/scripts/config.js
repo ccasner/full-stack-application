@@ -6,7 +6,7 @@ const config = {
     // development: 'http://localhost:4741'
   },
   googleMaps: {
-    production: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDMVv5sfLKk5TDsNYNTaYuu9QpGeIa3VzY&callback=initMap'
+    production: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyA_pEqp7-EjtsC3ilVbHmMEiJkft3H07bg&callback=initMap'
   }
 }
 
