@@ -1,0 +1,24 @@
+{{#each tolls as |toll|}}
+<tr data-id="{{toll.id}}">
+  <td>Exit: {{toll.location}}</td>
+  <td>Price: ${{toll.price}}</td>
+  <td><button class='add-button'>Add Charge</button>
+</tr>
+
+{{/each}}
+
+{{#each charges as |charge|}}
+<tr data-id="{{charge.id}}">
+  <td>Id: {{charge.id}}</td>
+  <td>Exit: {{charge.location}}</td>
+  <td>Price: ${{charge.price}}</td>
+  <td>Date: {{charge.date}}</td>
+  <td><button class='remove-button'>Remove</button></td>
+  <td><button class='edit-button'>Edit Date</button></td>
+</tr>
+{{/each}}
+
+
+
+
+  <!-- <li class='dynamic'><button class='add-button'>Add</button></li> -->
