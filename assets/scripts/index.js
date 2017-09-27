@@ -21,13 +21,6 @@ $(() => {
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#sign-out').on('submit', authEvents.onSignOut)
-  $('#delete-charge').on('submit', chargeEvents.onDeleteCharge)
   tollEvents.onGetTolls()
   chargeEvents.addHandlers()
 })
-
-// $('.div').on('click', chargeEvents.onAddCharge)
-// $('ul#staticUl').on('click', 'li.dynamicLi', function (event) {
-//   event.preventDefault()
-//   console.log('button')
-// })

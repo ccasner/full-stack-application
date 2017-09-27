@@ -1,2 +1,21 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+#change-password {
+  display: none;
+}
+#sign-out {
+  display: none;
+}
+#getChargesButton {
+  display: none;
+}
+tr {
+  text-align: left;
+}
+td {
+  border: 1px solid black;
+}
+#edit-date {
+  display: none;
+}

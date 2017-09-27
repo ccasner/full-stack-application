@@ -101,7 +101,8 @@ var map, infoWindow;
 
 
 
-
+        <p id="exit"></p>
+        <p id="price"></p>
         <p id="message"></p>
         <form id="sign-in">
           <fieldset>
@@ -130,34 +131,19 @@ var map, infoWindow;
         <input type="password" name="passwords[old]" placeholder="Enter Old Password">
         <input type="password" name="passwords[new]" placeholder="Enter New Password">
         <input type="submit" class="button" name="submit" value="Confirm">
+        <p id="passwordMessage"></p>
       </fieldset>
       </form>
-      <button id="getTollsButton" class="btn btn-default">Get Tolls</button>
-      <div id="content" class="content"></div>
+      <div id="toll-content" class="toll-content"></div>
+      <div id="charge-content" class="charge-content"></div>
       <button id="getChargesButton" class="btn btn-default">My Charges</button>
-      <form>
-        <input type="text" name=charge[id] placeholder="Charge to Delete">
-      <button id="deleteChargeButton" class="btn btn-default">Clear Charges</button>
-    </form>
-      <table style="width:100%" class='toll-table'>
-        <caption>Tolls</caption>
-        <tr>
-          <th>Exit</th>
-          <th>Price</th>
-          <th>Add To Charges</th>
-        </tr>
-      </table>
-
-      <table style="width:100%" data-id="{{toll.id}}">
-        <caption>My Charges</caption>
-        <tr>
-          <th>Exit</th>
-          <th>Price</th>
-          <th>Date</th>
-        </tr>
-        <td>{{charge.location}}</td>
-        <td>{{charge.price}}</td>
-        <td>{{charge.date}}</td>
-      </table>
+      <form id="edit-date">
+        <fieldset>
+          <!-- <input type="text" name="charge[id]" placeholder="Enter Charge Date"> -->
+          <input type="date" name="charge[date]" placeholder="Enter New Date">
+          <input type="submit" class="button" name="submit" value="Confirm">
+        </fieldset>
+      </form>
+      <p id="message2"></p>
     </body>
 </html>

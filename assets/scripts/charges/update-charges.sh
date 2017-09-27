@@ -5,8 +5,6 @@ curl --include --request PATCH "http://localhost:4741/charges/${ID}" \
   --header "Authorization: Token token=$TOKEN" \
   --data '{
     "charge": {
-      "location": "'"${LOCATION}"'",
-      "price": "'"${PRICE}"'",
-      "date": "'"${DATE}"'"
+      "location": "'"${LOCATION}"'"
     }
   }'

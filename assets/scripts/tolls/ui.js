@@ -14,13 +14,14 @@ const getTollId = function (event) {
 const getTollsSuccess = (data) => {
   store.tolls = data.tolls
   const showTollsHtml = showTolls({ tolls: data.tolls })
-  $('.content').append(showTollsHtml)
+  $('.toll-content').append(showTollsHtml)
   $('.add-button').on('click', getTollId)
   $('.add-button').on('click', chargeEvents.onGetOneToll)
 }
 
 const failure = (error) => {
   console.error(error)
+  $('#message2').text('Something went wrong')
 }
 
 module.exports = {
