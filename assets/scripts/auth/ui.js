@@ -1,9 +1,8 @@
 'use strict'
 const store = require('../store')
 
-const signUpSuccess = function (data) {
-  console.log(data)
-  $('#sign-up').hide()
+const signUpSuccess = function () {
+  $('#sign-up').trigger('reset')
   $('#authmessage').text('Sign Up Successful!').show()
   $('#authmessage').delay(1000).fadeOut('slow')
 }
