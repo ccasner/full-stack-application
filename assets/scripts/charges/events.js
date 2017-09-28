@@ -27,17 +27,13 @@ const onUpdateCharge = (event) => {
   event.preventDefault()
   const data = getFormFields(event.target)
   const id = chargeId
-  console.log(id)
-  console.log(data)
   api.updateCharge(id, data)
     .then(ui.updateChargeSuccess)
     .catch(ui.failure)
 }
 
 const getChargeId = function (deleteButton) {
-  console.log('here is the charge id')
   const elementId = $(deleteButton).parent().parent().attr('data-id')
-  console.log(elementId)
   return elementId
 }
 

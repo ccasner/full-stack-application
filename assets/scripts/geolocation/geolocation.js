@@ -1,5 +1,4 @@
-// const googleMaps = require('../config')
-
+'use strict'
 function initMap () {
   const leeExit = {lat: 42.297662, lng: -73.243628}
   const blandfordExit = {lat: 42.220804, lng: -72.963571}
@@ -23,10 +22,7 @@ function initMap () {
     zoom: 9,
     center: center
   })
-  const content = this.title
-  const infowindow = new google.maps.InfoWindow({
-    content: content
-  })
+
   const leeIcon = 'https://chart.googleapis.com/chart?chst=d_bubble_icon_texts_big&chld=bank-dollar|bbT|FFFFFF|000000|Lee|Toll:+$0.25'
   const lee = new google.maps.Marker({
     position: leeExit,

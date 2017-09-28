@@ -9,11 +9,6 @@ const onGetTolls = () => {
     .catch(ui.failure)
 }
 
-// const addHandlers = () => {
-//   $('#getTollsButton').on('click', onGetTolls)
-//   $('#clearTollsButton').on('click', onClearTolls)
-// }
-
 module.exports = {
   onGetTolls
 }

@@ -1,8 +1,6 @@
 'use strict'
 const store = require('../store')
 const api = require('./api')
-const getFormFields = require('../../../lib/get-form-fields')
-
 const showCharges = require('../../styles/toll-table.handlebars')
 
 const addChargeSuccess = () => {
@@ -52,8 +50,7 @@ const hideChargesSuccess = () => {
   $('#getChargesButton').show()
 }
 
-const failure = (error) => {
-  console.error(error)
+const failure = () => {
   $('#message2').text('Something went wrong').show()
   $('#message2').delay(1000).fadeOut('slow')
 }

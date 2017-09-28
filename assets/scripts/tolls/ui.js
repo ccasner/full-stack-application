@@ -1,7 +1,6 @@
 'use strict'
 
 const showTolls = require('../../styles/toll-table.handlebars')
-
 const chargeEvents = require('../charges/events')
 const store = require('../store')
 
@@ -19,8 +18,7 @@ const getTollsSuccess = (data) => {
   $('.add-button').on('click', chargeEvents.onGetOneToll)
 }
 
-const failure = (error) => {
-  console.error(error)
+const failure = () => {
   $('#message2').text('Something went wrong')
   $('#message2').delay(1000).fadeOut('slow')
 }

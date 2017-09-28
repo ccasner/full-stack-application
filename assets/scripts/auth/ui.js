@@ -6,14 +6,12 @@ const signUpSuccess = function () {
   $('#authmessage').text('Sign Up Successful!').show()
   $('#authmessage').delay(1000).fadeOut('slow')
 }
-const signUpFailure = function (error) {
-  console.log(error)
+const signUpFailure = function () {
   $('#authmessage').text('Something went wrong, try again!').show()
   $('#authmessage').delay(1000).fadeOut('slow')
 }
 
 const signInSuccess = function (data) {
-  console.log(data)
   store.user = data.user
   $('#authmessage').text('Sign In Successful!').show()
   $('#authmessage').delay(1000).fadeOut('slow')
@@ -24,26 +22,22 @@ const signInSuccess = function (data) {
   $('#sign-out').show()
   $('#getChargesButton').show()
 }
-const signInFailure = function (error) {
-  console.log(error)
+const signInFailure = function () {
   $('#authmessage').text('Something went wrong, try again!').show()
   $('#authmessage').delay(1000).fadeOut('slow')
 }
 
-const changePasswordSuccess = function (data) {
-  console.log(data)
+const changePasswordSuccess = function () {
   $('#change-password').trigger('reset')
   $('#passwordMessage').text('Password Reset Successfully!').show()
   $('#passwordMessage').delay(1000).fadeOut('slow')
 }
-const changePasswordFailure = function (error) {
-  console.log(error)
+const changePasswordFailure = function () {
   $('#passwordMessage').text('Something went wrong, try again!').show()
   $('#passwordMessage').delay(1000).fadeOut('slow')
 }
 
-const signOutSuccess = function (data) {
-  console.log(data)
+const signOutSuccess = function () {
   $('#sign-in').show()
   $('#sign-out').hide()
   $('#sign-up').show()
@@ -58,8 +52,7 @@ const signOutSuccess = function (data) {
   $('#signoutMessage').delay(1000).fadeOut('slow')
   store.user = null
 }
-const signOutFailure = function (error) {
-  console.log(error)
+const signOutFailure = function () {
   $('#signoutMessage').text('Something went wrong, try again!').show()
   $('#signoutMessage').delay(1000).fadeOut('slow')
 }
