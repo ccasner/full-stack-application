@@ -1,4 +1,7 @@
 'use strict'
+// const config = require('../config')
+// const google = config.googleMaps
+
 function initMap () {
   const leeExit = {lat: 42.297662, lng: -73.243628}
   const blandfordExit = {lat: 42.220804, lng: -72.963571}
