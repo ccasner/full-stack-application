@@ -272,8 +272,5 @@ function initMap () {
 }
 initMap()
 
-module.exports = {
-  initMap
-}
 
 // google.maps.event.addDomListener(window, 'load', initialize)
