@@ -16,6 +16,14 @@ body {
   border: 2px solid red;
   border-radius: 15px;
 }
+.pwinput {
+  background-color: lighten(#2355dd, 10%);
+  color: red;
+  font-size: bold;
+}
+input::placeholder {
+  color: #69015A;
+}
 #sign-out {
   display: none;
   float: right;
@@ -25,6 +33,11 @@ body {
   box-sizing: border-box;
   border: 2px solid red;
   border-radius: 15px;
+}
+.signoutinput {
+  background-color: lighten(#2355dd, 10%);
+  color: red;
+  font-size: bold;
 }
 #sign-in {
   clear: both;
@@ -47,8 +60,8 @@ body {
 }
 #toll-content {
   float: left;
-  background-color: #3BBA14;
   color: white;
+  font-weight: bold;
   margin: 50px auto auto 125px;
   width: auto;
 }
@@ -62,11 +75,15 @@ body {
 }
 #sign-in-message {
   color: #3BBA14;
+  font-family: monospace;
+  font-weight: bold;
   text-align: center;
   font-size: 15px;
 }
 #sign-up-message{
   color: #3BBA14;
+  font-family: monospace;
+  font-weight: bold;
   text-align: center;
   font-size: 15px;
 }
@@ -91,23 +108,20 @@ body {
   color: black;
   border: 5px solid black;
 }
-#exit {
-  float: left;
-  font-size: 50px;
-}
-#price{
-  float: left;
-  font-size: 50px;
-}
 tr {
   text-align: left;
 }
 td {
-  border: 1px solid black;
+  border: 3px solid white;
+  border-radius: 8px;
+  background-color: #3BBA14;
+  font-size: 15px;
 }
+
 input {
   background-color: #FFFFB2;
   color: #3BBA14;
+  text-decoration-color: #3BBA14;
   font-size: 13px;
   padding-left: 5px;
   // border: 1px solid $black;
@@ -118,6 +132,7 @@ input {
   display: none;
   float: right;
   margin: auto 200px 20px 100px;
+  font-weight: bold;
 }
 #authmessage {
   color: #FFFFB2;
@@ -161,11 +176,12 @@ h2 {
 }
 #charge-content {
   float: right;
-  background-color: #3BBA14;
   color: white;
   margin: 50px 125px auto auto;
   width: auto;
+  font-weight: bold;
 }
+
 #map {
   border-radius: 15px;
   height: 75%;
