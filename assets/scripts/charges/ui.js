@@ -44,6 +44,7 @@ const getChargesSuccess = (data) => {
   $('.charge-content').html(showChargesHtml)
   $('#getChargesButton').hide()
   $('#hideChargesButton').show()
+  $('.add-button').show()
 }
 const hideChargesSuccess = () => {
   $('#hideChargesButton').hide()

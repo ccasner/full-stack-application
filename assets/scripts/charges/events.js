@@ -15,6 +15,7 @@ const onClearCharges = () => {
   $('#charge-content').hide()
   $('#hideChargesButton').hide()
   $('#getChargesButton').show()
+  $('.add-button').hide()
 }
 
 const onGetOneToll = () => {
