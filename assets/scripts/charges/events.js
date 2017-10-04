@@ -16,6 +16,7 @@ const onClearCharges = () => {
   $('#hideChargesButton').hide()
   $('#getChargesButton').show()
   $('.add-button').hide()
+  $('#edit-date').hide()
 }
 
 const onGetOneToll = () => {
@@ -40,6 +41,7 @@ const getChargeId = function (deleteButton) {
 
 const onDeleteCharge = function (event) {
   event.preventDefault()
+  $('#edit-date').hide()
   const deleteButton = event.target
   const data = getChargeId(deleteButton)
   api.deleteCharge(data)

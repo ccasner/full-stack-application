@@ -6,6 +6,7 @@ const showCharges = require('../../styles/toll-table.handlebars')
 const addChargeSuccess = () => {
   $('#message2').text('Charge Added, set date!').show()
   $('#message2').delay(1000).fadeOut('slow')
+  $('#edit-date').hide()
   api.getCharges()
     .then(getChargesSuccess)
     .catch(failure)

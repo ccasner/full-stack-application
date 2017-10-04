@@ -49,6 +49,7 @@ const signOutSuccess = function () {
   $('#getChargesButton').hide()
   $('#hideChargesButton').hide()
   $('.charge-content').hide()
+  $('#edit-date').hide()
   $('#sign-in').trigger('reset')
   $('#sign-up').trigger('reset')
   $('#signoutMessage').text('Sign Out Successful!').show()
