@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Toll Tracker</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      <link href="https://fonts.googleapis.com/css?family=Arbutus|Encode+Sans+Expanded" rel="stylesheet">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+
+
+      <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+
+    <p id="signoutMessage"></p>
+    <form id="sign-out">
+        <fieldset>
+          <input type="submit" class="signoutinput" name="submit" value="Sign Out!">
+        </fieldset>
+      </form>
+    <form id="change-password">
+      <fieldset>
+      <input type="password" class="pwinput" name="passwords[old]" placeholder="Enter Old Password">
+      <input type="password" class="pwinput" name="passwords[new]" placeholder="Enter New Password">
+      <input type="submit" class="pwinput" class="button" name="submit" value="Confirm">
+      <p id="passwordMessage"></p>
+    </fieldset>
+    </form>
+    <p id="message"></p>
+    <p id="charge-message"></p>
+    <h1>Toll Tracker</h1>
+    <div id="map"></div>
+    <!-- <script>
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: -34.397, lng: 150.644},
+        zoom: 6
+      })};
+      </script> -->
+      <!-- async defer -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbYS6aKXm_6ynJVlj7LDO7UlI371c7-30"></script>
+<script src="./assets/scripts/geolocation/geolocation.js"></script>
+    </head>
+    <body>
+
+<!-- &callback=initMap -->
+        <!-- <script>
+          function initMap () {
+            const myLatLng = {lat: 42.297662, lng: -73.243628}
+            const blandfordExit = {lat: 42.220804, lng: -72.963571}
+            const map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 8,
+              center: blandfordExit
+            })
+
+            const lee = new google.maps.Marker({
+              position: myLatLng,
+              map: map,
+              title: 'Lee'
+            })
+            const blandford = new google.maps.Marker({
+              position: blandfordExit,
+              map: map,
+              title: 'Blandford'
+            })
+          }
+        </script> -->
+
+<!-- type="text/javascript" -->
+<!-- <script>
+var map, infoWindow;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 6
+        });
+        infoWindow = new google.maps.InfoWindow;
+
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Location found.');
+            infoWindow.open(map);
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      }
+
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+        infoWindow.open(map);
+      }
+      </script> -->
+
+
+
+      <div id="toll-content" class="toll-content"></div>
+      <p id="authmessage"></p>
+      <div id="authbox">
+        <p id="sign-in-message">Sign In to see your charges!</p>
+        <form id="sign-in">
+          <fieldset>
+            <input type="text" name="credentials[email]" placeholder="Enter Email">
+            <input type="password" name="credentials[password]" placeholder="Enter Password">
+            <input type="submit" class="button" name="submit" value="Sign in!">
+          </fieldset>
+        </form>
+        <p id="sign-up-message">New User? Sign Up and get tracking!</p>
+        <form id="sign-up">
+          <fieldset>
+            <!-- <h2>New User? Sign up!</h2> -->
+            <input type="text" name="credentials[email]" placeholder="Enter Username">
+            <input type="password" name="credentials[password]" placeholder="Enter Password">
+            <input type="password" name="credentials[password_confirmation]" placeholder="Re-Enter Password">
+            <input type="submit" class="button" name="submit" value="Sign up!">
+          </fieldset>
+        </form>
+      </div>
+
+      <button id="getChargesButton" class="btn btn-default">My Charges</button>
+      <button id="hideChargesButton" class="btn btn-default">Hide Charges</button>
+      <div id="charge-content" class="charge-content"></div>
+      <form id="edit-date">
+        <fieldset>
+          <input type="date" name="charge[date]" placeholder="Enter New Date">
+          <input type="submit" class="button" name="submit" value="Confirm">
+        </fieldset>
+      </form>
+      <p id="message2"></p>
+    </body>
+    <footer>
+      <p>Made by Charlotte Casner</p>
+    </footer>
+</html>
