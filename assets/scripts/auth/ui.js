@@ -7,6 +7,7 @@ const signUpSuccess = function () {
   $('#authmessage').delay(1000).fadeOut('slow')
 }
 const signUpFailure = function () {
+  $('#sign-up').trigger('reset')
   $('#authmessage').text('Something went wrong, try again!').show()
   $('#authmessage').delay(1000).fadeOut('slow')
 }
@@ -23,6 +24,7 @@ const signInSuccess = function (data) {
   $('#getChargesButton').show()
 }
 const signInFailure = function () {
+  $('#sign-in').trigger('reset')
   $('#authmessage').text('Something went wrong, try again!').show()
   $('#authmessage').delay(1000).fadeOut('slow')
 }
@@ -33,6 +35,7 @@ const changePasswordSuccess = function () {
   $('#passwordMessage').delay(1000).fadeOut('slow')
 }
 const changePasswordFailure = function () {
+  $('#change-password').trigger('reset')
   $('#passwordMessage').text('Something went wrong, try again!').show()
   $('#passwordMessage').delay(1000).fadeOut('slow')
 }
