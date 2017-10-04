@@ -45,6 +45,7 @@ const signOutSuccess = function () {
   $('#sign-out').hide()
   $('#sign-up').show()
   $('#authbox').show()
+  $('.add-button').hide()
   $('#change-password').hide()
   $('#getChargesButton').hide()
   $('#hideChargesButton').hide()
